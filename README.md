@@ -1,30 +1,96 @@
-# Remix of Rockfall prediction sy
+# Rockfall Prediction System
 
-*Automatically synced with your [v0.app](https://v0.app) deployments*
+[![Deployed on Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?style=for-the-badge&logo=vercel)](https://v0-remix-of-rockfall-prediction-sy.vercel.app/)
+[![Built with v0](https://img.shields.io/badge/Built%20with-v0.app-black?style=for-the-badge)](https://v0.app)
 
-[![Deployed on Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?style=for-the-badge&logo=vercel)](https://vercel.com/shelkeaniket1719-gmailcoms-projects/v0-remix-of-rockfall-prediction-sy)
-[![Built with v0](https://img.shields.io/badge/Built%20with-v0.app-black?style=for-the-badge)](https://v0.app/chat/projects/iBSuDWdVHI9)
+A light-themed, real-time monitoring and analytics dashboard to predict rockfall risks in mining environments. The app visualizes sensor data, computes risk indicators, and provides role-based dashboards for managers, engineers, and workers.
 
-## Overview
+## Live Demo
 
-This repository will stay in sync with your deployed chats on [v0.app](https://v0.app).
-Any changes you make to your deployed app will be automatically pushed to this repository from [v0.app](https://v0.app).
+- Production: https://v0-remix-of-rockfall-prediction-sy.vercel.app/
+- Rename tip: To remove “remix” from the URL, rename the Vercel project or publish a new project with your preferred name (Project Settings → General → Project Name, then Domains).
+
+## Features
+
+- Real-time sensor monitoring (gauges and tables)
+- Risk indicators and alerts panel
+- Prediction charts and incident trends (Recharts)
+- Role-based dashboards (Manager, Engineer, Worker)
+- Mine map and simulation views
+- Reports page for historical insights
+- Accessible, responsive UI built with shadcn/ui and Tailwind CSS v4
+- Light theme by default via semantic tokens
+
+## Tech Stack
+
+- Framework: Next.js (App Router) + TypeScript
+- UI: Tailwind CSS v4 + shadcn/ui + Radix primitives
+- Charts: Recharts
+- Theming: Design tokens (bg-background, text-foreground, etc.) with light palette
+- State/Patterns: Server Components + client components where needed
+
+## Project Structure
+
+\`\`\`
+app/
+  layout.tsx         # Root layout, fonts, providers
+  page.tsx           # Landing/dashboard entry
+  globals.css        # Tailwind v4 + design tokens
+components/
+  ...                # UI components, dashboards, charts, panels
+public/
+  ...                # Icons, placeholders, static assets
+\`\`\`
+
+Selected components include:
+- components/alerts-panel.tsx, live-sensor-gauges.tsx, prediction-chart.tsx, incident-trend-chart.tsx
+- Role dashboards: manager-dashboard.tsx, engineer-dashboard.tsx, worker-dashboard.tsx
+- Navigation + layout pieces: sidebar.tsx, theme-provider.tsx
+
+## Getting Started (Local)
+
+Prerequisites:
+- Node.js 18+ and a package manager (npm, pnpm, or yarn)
+
+Install and run:
+\`\`\`bash
+# install deps
+npm install
+
+# start dev server
+npm run dev
+
+# build for production
+npm run build
+
+# start production build
+npm run start
+\`\`\`
+
+Then open http://localhost:3000.
+
+## Environment Variables
+
+This project runs without external services by default. If you add integrations (e.g., databases, APIs), define environment variables:
+- Client-side variables must be prefixed with `NEXT_PUBLIC_`.
+- Server-only variables can be unprefixed and are accessible in server actions/route handlers.
 
 ## Deployment
 
-Your project is live at:
+- One-click deploy on Vercel (Hobby plan is free): Publish from v0 or connect the GitHub repo on Vercel.
+- Auto-deploys: After linking to GitHub, every push to the configured branch (e.g., `main`) triggers a new deployment.
+- Rename default domain: Vercel Project Settings → General (Project Name), then Settings → Domains to set your preferred default domain.
 
-**[https://vercel.com/shelkeaniket1719-gmailcoms-projects/v0-remix-of-rockfall-prediction-sy](https://vercel.com/shelkeaniket1719-gmailcoms-projects/v0-remix-of-rockfall-prediction-sy)**
+## Contributing
 
-## Build your app
+- Fork the repo and create a feature branch
+- Commit with clear messages and open a Pull Request
+- Please keep UI components accessible and consistent with existing patterns
 
-Continue building your app on:
+## Editing this README
 
-**[https://v0.app/chat/projects/iBSuDWdVHI9](https://v0.app/chat/projects/iBSuDWdVHI9)**
+- In GitHub: Edit the `README.md` file in your repository, commit to a branch, and open a PR (or push to `main` if appropriate).
+- In v0: Ask v0 to “edit README.md” with your changes, or paste the updated Markdown. v0 will update and sync the repository automatically.
 
-## How It Works
-
-1. Create and modify your project using [v0.app](https://v0.app)
-2. Deploy your chats from the v0 interface
-3. Changes are automatically pushed to this repository
-4. Vercel deploys the latest version from this repository
+---
+Made with Next.js, Tailwind CSS v4, shadcn/ui, and Recharts.
