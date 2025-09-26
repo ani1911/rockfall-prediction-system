@@ -1,5 +1,7 @@
 # Rockfall Prediction System 
 
+   SIH project by RockBottom Team
+
 
 
 A light-themed, real-time monitoring and analytics dashboard to predict rockfall risks in mining environments. The app visualizes sensor data, computes risk indicators, and provides role-based dashboards for managers, engineers, and workers.
